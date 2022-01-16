@@ -1,3 +1,4 @@
+// 线上数据库
 module.exports = ({ env }) => ({
   defaultConnection: "default",
   connections: {
@@ -9,13 +10,14 @@ module.exports = ({ env }) => ({
         port: env.int("DATABASE_PORT", 3306), // 服务器端口
         database: env("DATABASE_NAME", "blog"), // 远程服务名称
         username: env("DATABASE_USERNAME", "borey"), // 账号
-        password: env("DATABASE_PASSWORD", "borey0529"), // 密码*AD258E9CA2F37846005DB1C01B263022EAD63E73
+        password: env("DATABASE_PASSWORD", "borey0529"), // 密码
       },
       options: {},
     },
   },
 });
 
+// 本地测试数据库
 // module.exports = ({ env }) => ({
 //   defaultConnection: "default",
 //   connections: {
